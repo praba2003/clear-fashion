@@ -1088,4 +1088,4 @@ const marketplace = [
   }
 ];
 
-module.exports =  {marketplace};
+module.exports = {marketplace};
