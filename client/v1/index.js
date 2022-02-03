@@ -41,15 +41,16 @@ console.log(MY_FAVORITE_BRANDS[2]);
  * The variable is loaded by the file data.js
  * 👕
  */
+const {marketplace}  = require('./data.js');
+console.table(marketplace);
 
- const { marketplace } = require('./data.js')
- console.table(marketplace);
 
 // 🎯 TODO: Number of products
 // 1. Create a variable and assign it the number of products
 var number_products = marketplace.length;
 // 2. Log the variable
 console.log(number_products);
+
 
 // 🎯 TODO: Brands name
 // 1. Create a variable and assign it the list of brands name only
