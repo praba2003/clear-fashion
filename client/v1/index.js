@@ -16,8 +16,8 @@ const MY_FAVORITE_BRANDS = [{
 
 console.table(MY_FAVORITE_BRANDS);
 console.log(MY_FAVORITE_BRANDS[0]);
-
-
+console.log(MY_FAVORITE_BRANDS[1]);
+console.log(MY_FAVORITE_BRANDS[2]);
 
 /**
  * 🌱
@@ -33,9 +33,6 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 2. Log the variable
 
 
-
-
-
 /**
  * 👕
  * Easy 😁?
@@ -45,15 +42,24 @@ console.log(MY_FAVORITE_BRANDS[0]);
  * 👕
  */
 
+ const { marketplace } = require('./data.js')
+ console.table(marketplace);
+
 // 🎯 TODO: Number of products
 // 1. Create a variable and assign it the number of products
+var number_products = marketplace.length;
 // 2. Log the variable
-
+console.log(number_products);
 
 // 🎯 TODO: Brands name
 // 1. Create a variable and assign it the list of brands name only
+var brands_name = [];
+marketplace.forEach(element => brands_name.push(element["brand"]));
+brands_name = [...new Set(brands_name)]
 // 2. Log the variable
+console.log(brands_name);
 // 3. Log how many brands we have
+console.log(brands_name.length);
 
 
 // 🎯 TODO: Sort by price
@@ -76,9 +82,6 @@ console.log(MY_FAVORITE_BRANDS[0]);
 // 🎯 TODO: Average price
 // 1. Determine the average price of the marketplace
 // 2. Log the average
-
-
-
 
 
 /**
