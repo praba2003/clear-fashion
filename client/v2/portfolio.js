@@ -8,6 +8,8 @@ let currentPagination = {};
 // instantiate the selectors
 const selectShow = document.querySelector('#show-select');
 const selectPage = document.querySelector('#page-select');
+const selectBrands = document.querySelector('#brand-select');
+const selectSort = document.querySelector('#sort-select');
 const sectionProducts = document.querySelector('#products');
 const spanNbProducts = document.querySelector('#nbProducts');
 
@@ -71,6 +73,7 @@ const renderProducts = products => {
   sectionProducts.appendChild(fragment);
 };
 
+
 /**
  * Render page selector
  * @param  {Object} pagination
@@ -86,21 +89,39 @@ const renderPagination = pagination => {
   selectPage.selectedIndex = currentPage - 1;
 };
 
+
+const renderBrands = pagination => {
+  const { currentPage, pageCount } = pagination;
+  var brands = ['adresse', 'loom', 'aatise', '1083', 'dedicated', 'coteleparis'];
+  const options = Array.from(
+    { 'length': brands.length },
+    (value, index) => `<option value="${brands[index]}">${brands[index]}</option>`
+  ).join('');
+
+  selectBrands.innerHTML = options;
+  selectBrands.selectedIndex = currentPage - 1;
+};
+
+
 /**
  * Render page selector
  * @param  {Object} pagination
  */
+
 const renderIndicators = pagination => {
   const {count} = pagination;
-
   spanNbProducts.innerHTML = count;
+  //pagination.products
 };
+
 
 const render = (products, pagination) => {
   renderProducts(products);
   renderPagination(pagination);
+  renderBrands(pagination);
   renderIndicators(pagination);
 };
+
 
 /**
  * Declaration of all Listeners
@@ -109,16 +130,37 @@ const render = (products, pagination) => {
 /**
  * Select the number of products to display
  */
+let size = 12;
 selectShow.addEventListener('change', async (event) => {
-  const products = await fetchProducts(currentPagination.currentPage, parseInt(event.target.value));
-
+  size = parseInt(event.target.value)
+  const products = await fetchProducts(currentPagination.currentPage, size);
   setCurrentProducts(products);
   render(currentProducts, currentPagination);
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
   const products = await fetchProducts();
-
   setCurrentProducts(products);
+  render(currentProducts, currentPagination);
+});
+
+/**
+ * Select the page from where the products will be displayed
+ */
+
+let page = 1;
+selectPage.addEventListener('change', async (event) => {
+  page = parseInt(event.target.value)
+  const products = await fetchProducts(page, size);
+  setCurrentProducts(products);
+  render(currentProducts, currentPagination);
+});
+
+let brand = "adresse";
+selectPage.addEventListener('change', async (event) => {
+  brand = parseInt(event.target.value)
+  const products = await fetchProducts(page, size);
+  setCurrentProducts(products);
+  currentProducts = currentProducts.filter(products => products[0]['brand'] == brand);
   render(currentProducts, currentPagination);
 });

@@ -265,7 +265,7 @@ const COTELE_PARIS = [
 // // 1. Log if we have new products only (true or false)
 // // A new product is a product `released` less than 2 weeks.
 
-/*
+
 function new_released_products(products){
   products.forEach(element => {
 
@@ -274,7 +274,7 @@ function new_released_products(products){
     }
   });
 }
-*/
+
 
 // 🎯 TODO: Reasonable price
 // // 1. Log if coteleparis is a reasonable price shop (true or false)
@@ -360,3 +360,5 @@ console.log(jacket.favorite);
 // 🎯 TODO: Save in localStorage
 // 1. Save MY_FAVORITE_BRANDS in the localStorage
 // 2. log the localStorage
+
+new_released_products(COTELE_PARIS);
