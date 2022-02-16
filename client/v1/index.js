@@ -14,10 +14,10 @@ const MY_FAVORITE_BRANDS = [{
   'url': 'https://adresse.paris/'
 }];
 
-console.table(MY_FAVORITE_BRANDS);
-console.log(MY_FAVORITE_BRANDS[0]);
-console.log(MY_FAVORITE_BRANDS[1]);
-console.log(MY_FAVORITE_BRANDS[2]);
+//console.table(MY_FAVORITE_BRANDS);
+//console.log(MY_FAVORITE_BRANDS[0]);
+//console.log(MY_FAVORITE_BRANDS[1]);
+//console.log(MY_FAVORITE_BRANDS[2]);
 
 /**
  * 🌱
@@ -44,7 +44,7 @@ console.log(MY_FAVORITE_BRANDS[2]);
  */
 
 const {marketplace} = require('./data.js')
-console.table(marketplace);
+//console.table(marketplace);
 
 
 // 🎯 TODO: Number of products
@@ -52,7 +52,7 @@ console.table(marketplace);
 // 2. Log the variable
 
 var number_products = marketplace.length;
-console.log(number_products);
+//console.log(number_products);
 
 
 // 🎯 TODO: Brands name
@@ -63,8 +63,8 @@ console.log(number_products);
 var brands_name = [];
 marketplace.forEach(element => brands_name.push(element['brand']));
 brands_name = [...new Set(brands_name)];
-console.log(brands_name);
-console.log(brands_name.length);
+//console.log(brands_name);
+//console.log(brands_name.length);
 
 
 // 🎯 TODO: Sort by price
@@ -76,7 +76,7 @@ function sort_by_price(product_1, product_2){
   return product_1['price'] - product_2['price']
 };
 var marketplace_sortedByPrice = marketplace.sort(sort_by_price);
-console.table(marketplace_sortedByPrice);
+//console.table(marketplace_sortedByPrice);
 
 
 // 🎯 TODO: Sort by date
@@ -88,7 +88,7 @@ function sort_by_date(product_1, product_2){
   return new Date(product_1['date']) - new Date(product_2['date'])
 };
 var marketplace_sortedByDate = marketplace.sort(sort_by_date);
-console.table(marketplace_sortedByDate);
+//console.table(marketplace_sortedByDate);
 
 
 // 🎯 TODO: Filter a specific price range
@@ -96,8 +96,8 @@ console.table(marketplace_sortedByDate);
 // 2. Log the list
 
 var marketplace_filtered = marketplace.filter(product => 50 <= product['price'] <= 100);
-console.table(marketplace_filtered);
-console.log(marketplace_filtered.length);
+//console.table(marketplace_filtered);
+//console.log(marketplace_filtered.length);
 
 
 // 🎯 TODO: Average price
@@ -110,7 +110,7 @@ function average(list_products){
   average_price = average_price / marketplace.length;
   return average_price;
 }
-console.log(average(marketplace));
+//console.log(average(marketplace));
 
 
 /**
@@ -150,11 +150,11 @@ const brands = {
   'adresse': marketplace_adresse,
 };
 
-console.log(brands);
-console.log(brands.aatise.length);
-console.log(brands.adresse.length);
-console.log(brands.dedicated.length);
-console.log(brands.loom.length);
+console.log(marketplace_1083);
+//console.log(brands.aatise.length);
+//console.log(brands.adresse.length);
+//console.log(brands.dedicated.length);
+//console.log(brands.loom.length);
 
 // 🎯 TODO: Sort by price for each brand
 // 1. For each brand, sort the products by price, from highest to lowest
@@ -164,7 +164,7 @@ const brands_sortedByPrice = {...brands};
 for(var element in brands_sortedByPrice){
   brands_sortedByPrice[element].sort(sort_by_price);
 };
-console.log(brands_sortedByPrice);
+//console.log(brands_sortedByPrice);
 
 
 // 🎯 TODO: Sort by date for each brand
@@ -174,7 +174,7 @@ const brands_sortedByDate = {...brands};
 for(var element in brands_sortedByDate){
   brands_sortedByDate[element].sort(sort_by_date);
 };
-console.log(brands_sortedByDate);
+//console.log(brands_sortedByDate);
 
 
 /**
@@ -286,7 +286,7 @@ function reasonable_price(products){
   console.log(price);
   return price<100
 }
-console.log(reasonable_price(COTELE_PARIS));
+//console.log(reasonable_price(COTELE_PARIS));
 
 
 // 🎯 TODO: Find a specific product
@@ -302,8 +302,8 @@ function find_product(product_uuid, products){
   });
   return elmt;
 };
-console.log(find_product('f48810f1-a822-5ee3-b41a-be15e9a97e3f',COTELE_PARIS));
-console.log(find_product('b56c6d88-749a-5b4c-b571-e5b5c6483131',COTELE_PARIS));
+//console.log(find_product('f48810f1-a822-5ee3-b41a-be15e9a97e3f',COTELE_PARIS));
+//console.log(find_product('b56c6d88-749a-5b4c-b571-e5b5c6483131',COTELE_PARIS));
 
 
 // 🎯 TODO: Delete a specific product
@@ -318,7 +318,7 @@ function delete_product(product_uuid, products){
   });
 };
 delete_product('b56c6d88-749a-5b4c-b571-e5b5c6483131',COTELE_PARIS);
-console.table(COTELE_PARIS);
+//console.table(COTELE_PARIS);
 
 
 // 🎯 TODO: Save the favorite product
@@ -348,8 +348,8 @@ blueJacket = {
 // 3. Update `jacket` property with `favorite` to true WITHOUT changing blueJacket properties
 jacket = {... blueJacket};
 jacket.favorite = true;
-console.log(blueJacket.favorite);
-console.log(jacket.favorite);
+//console.log(blueJacket.favorite);
+//console.log(jacket.favorite);
 
 /**
  * 🎬
@@ -361,4 +361,4 @@ console.log(jacket.favorite);
 // 1. Save MY_FAVORITE_BRANDS in the localStorage
 // 2. log the localStorage
 
-new_released_products(COTELE_PARIS);
+//new_released_products(COTELE_PARIS);

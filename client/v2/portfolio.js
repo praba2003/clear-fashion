@@ -8,6 +8,7 @@ let currentPagination = {};
 // instantiate the selectors
 const selectShow = document.querySelector('#show-select');
 const selectPage = document.querySelector('#page-select');
+const selectPrice = document.querySelector('#price-select');
 const selectBrands = document.querySelector('#brand-select');
 const selectSort = document.querySelector('#sort-select');
 const sectionProducts = document.querySelector('#products');
@@ -127,9 +128,12 @@ const render = (products, pagination) => {
  * Declaration of all Listeners
  */
 
+
 /**
  * Select the number of products to display
  */
+
+
 let size = 12;
 selectShow.addEventListener('change', async (event) => {
   size = parseInt(event.target.value)
@@ -144,9 +148,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   render(currentProducts, currentPagination);
 });
 
+
 /**
  * Select the page from where the products will be displayed
  */
+
 
 let page = 1;
 selectPage.addEventListener('change', async (event) => {
@@ -156,11 +162,23 @@ selectPage.addEventListener('change', async (event) => {
   render(currentProducts, currentPagination);
 });
 
-let brand = "adresse";
-selectPage.addEventListener('change', async (event) => {
-  brand = parseInt(event.target.value)
+
+/**
+ * Setting of the parameter Display by
+ */
+
+
+
+/**
+ * Select the products by brand
+ */
+
+let brand = 'adresse';
+selectBrands.addEventListener('change', async (event) => {
+  brand = (event.target.value).toString()
+  console.log(brand);
   const products = await fetchProducts(page, size);
   setCurrentProducts(products);
-  currentProducts = currentProducts.filter(products => products[0]['brand'] == brand);
+  currentProducts = currentProducts.filter(currentProducts => currentProducts['brand'] == brand);
   render(currentProducts, currentPagination);
 });
