@@ -176,7 +176,6 @@ selectPage.addEventListener('change', async (event) => {
 let brand = 'adresse';
 selectBrands.addEventListener('change', async (event) => {
   brand = (event.target.value).toString()
-  console.log(brand);
   const products = await fetchProducts(page, size);
   setCurrentProducts(products);
   currentProducts = currentProducts.filter(currentProducts => currentProducts['brand'] == brand);
