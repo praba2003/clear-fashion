@@ -283,10 +283,10 @@ function new_released_products(products){
 function reasonable_price(products){
   var price = 0;
   products.forEach(element => price += element["price"]);
-  console.log(price);
+  //console.log(price);
   return price<100
 }
-//console.log(reasonable_price(COTELE_PARIS));
+// console.log(reasonable_price(COTELE_PARIS));
 
 
 // 🎯 TODO: Find a specific product

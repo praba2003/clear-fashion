@@ -13,6 +13,7 @@ const selectBrands = document.querySelector('#brand-select');
 const selectSort = document.querySelector('#sort-select');
 const sectionProducts = document.querySelector('#products');
 const spanNbProducts = document.querySelector('#nbProducts');
+const spanNbRecentProducts = document.querySelector('#nbRecentProducts');
 
 /**
  * Set global value
@@ -110,9 +111,19 @@ const renderBrands = pagination => {
  */
 
 const renderIndicators = pagination => {
-  const {count} = pagination;
-  spanNbProducts.innerHTML = count;
-  //pagination.products
+
+  // Feature 8 - Number of products indicator
+  //const {count} = pagination;
+  spanNbProducts.innerHTML = pagination.count;
+
+  // Feature 9 - Number of recent products indicator
+  spanNbRecentProducts.innerHTML = pagination.count;
+
+  // Feature 10 - p50, p90 and p95 price value indicator
+
+  
+  // Feature 11 - Last released date indicator
+
 };
 
 
@@ -130,7 +141,7 @@ const render = (products, pagination) => {
 
 
 /**
- * Select the number of products to display
+ * Feature 0 - Show more
  */
 
 
@@ -150,7 +161,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
 /**
- * Select the page from where the products will be displayed
+ * Feature 1 - Browse pages
  */
 
 
@@ -164,20 +175,89 @@ selectPage.addEventListener('change', async (event) => {
 
 
 /**
- * Setting of the parameter Display by
+ * Feature 2 - Filter by brands
  */
 
 
-
-/**
- * Select the products by brand
- */
-
-let brand = 'adresse';
-selectBrands.addEventListener('change', async (event) => {
-  brand = (event.target.value).toString()
+ selectBrands.addEventListener('change', async (event) => {
+  let brand = (event.target.value).toString()
   const products = await fetchProducts(page, size);
   setCurrentProducts(products);
   currentProducts = currentProducts.filter(currentProducts => currentProducts['brand'] == brand);
+  render(currentProducts, currentPagination);
+});
+
+
+/**
+ * Setting of the parameter Display by
+ */
+
+selectPrice.addEventListener('change', async (event) => {
+  let display_by = (event.target.value).toString()
+  const products = await fetchProducts(page, size);
+  setCurrentProducts(products);
+
+
+  // Feature 3 - Filter by recent products
+  if(display_by == 'price-recently')
+  {
+    var today = new Date()
+    currentProducts = currentProducts.filter(currentProducts => new Date(currentProducts['released']) - today.getDate() < 14);
+  }
+
+
+  // Feature 4 - Filter by reasonable price
+  if(display_by == 'price-reasonnable')
+  {
+    currentProducts = currentProducts.filter(currentProducts => currentProducts['price'] <50);
+  }
+
+  render(currentProducts, currentPagination);
+});
+
+
+/**
+ * Setting of the parameter Sort
+ */
+
+function sort_by_price(product_1, product_2){
+  return product_1['price'] - product_2['price']
+};
+
+function sort_by_date(product_1, product_2){
+  return new Date(product_1['date']) - new Date(product_2['date'])
+};
+
+selectSort.addEventListener('change', async (event) => {
+  let sort = (event.target.value).toString()
+  const products = await fetchProducts(page, size);
+  setCurrentProducts(products);
+
+
+  // Feature 5 - Sort by price
+  if(sort == 'price-asc')
+  {
+    currentProducts = currentProducts.sort(sort_by_price);
+  }
+  
+  if(sort == 'price-desc')
+  {
+    currentProducts = currentProducts.sort(sort_by_price);
+    currentProducts.reverse();
+  }
+
+  
+  // Feature 6 - Sort by date
+  if(sort == 'date-asc')
+  {
+    currentProducts = currentProducts.sort(sort_by_date);
+  }
+  
+  if(sort == 'date-desc')
+  {
+    currentProducts = currentProducts.sort(sort_by_date);
+    currentProducts.reverse();
+  }
+  
   render(currentProducts, currentPagination);
 });
