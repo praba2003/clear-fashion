@@ -14,6 +14,10 @@ const selectSort = document.querySelector('#sort-select');
 const sectionProducts = document.querySelector('#products');
 const spanNbProducts = document.querySelector('#nbProducts');
 const spanNbRecentProducts = document.querySelector('#nbRecentProducts');
+const spanp50 = document.querySelector('#p50');
+const spanp90 = document.querySelector('#p90');
+const spanp95 = document.querySelector('#p95');
+const spanLastReleasedDate= document.querySelector('#lastReleasedDate');
 
 /**
  * Set global value
@@ -117,13 +121,15 @@ const renderIndicators = pagination => {
   spanNbProducts.innerHTML = pagination.count;
 
   // Feature 9 - Number of recent products indicator
-  spanNbRecentProducts.innerHTML = pagination.count;
+  spanNbRecentProducts.innerHTML = 0;
 
   // Feature 10 - p50, p90 and p95 price value indicator
+  spanp50.innerHTML = 0;
+  spanp90.innerHTML = 0;
+  spanp95.innerHTML = 0;
 
-  
-  // Feature 11 - Last released date indicator
-
+  // Feature 11 - Last released date 
+  spanLastReleasedDate.innerHTML = 0;
 };
 
 
