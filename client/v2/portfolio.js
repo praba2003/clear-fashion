@@ -63,8 +63,11 @@ const renderProducts = products => {
   const div = document.createElement('div');
   const template = products
     .map(product => {
+      /**
+      * Feature 12 - Open product link
+      */
       return `
-      <div class="product" id=${product.uuid}>
+      <div style="font-family:cursive;" class="product" id=${product.uuid}>
         <span>${product.brand}</span>
         <a href="${product.link}">${product.name}</a>
         <span>${product.price}</span>
@@ -75,7 +78,7 @@ const renderProducts = products => {
 
   div.innerHTML = template;
   fragment.appendChild(div);
-  sectionProducts.innerHTML = '<h2>Products</h2>';
+  sectionProducts.innerHTML = '<h2 style="font-family:cursive;">Products</h2>';
   sectionProducts.appendChild(fragment);
 };
 
@@ -116,19 +119,31 @@ const renderBrands = pagination => {
 
 const renderIndicators = pagination => {
 
-  // Feature 8 - Number of products indicator
+  /**
+  * Feature 8 - Number of products indicator
+  */
+
   //const {count} = pagination;
   spanNbProducts.innerHTML = pagination.count;
 
-  // Feature 9 - Number of recent products indicator
+  /**
+  * Feature 9 - Number of recent products indicator
+  */
+
   spanNbRecentProducts.innerHTML = 0;
 
-  // Feature 10 - p50, p90 and p95 price value indicator
+  /**
+  * Feature 10 - p50, p90 and p95 price value indicator
+  */
+
   spanp50.innerHTML = 0;
   spanp90.innerHTML = 0;
   spanp95.innerHTML = 0;
 
-  // Feature 11 - Last released date 
+  /**
+  * Feature 11 - Last released date 
+  */
+
   spanLastReleasedDate.innerHTML = 0;
 };
 
@@ -150,7 +165,6 @@ const render = (products, pagination) => {
  * Feature 0 - Show more
  */
 
-
 let size = 12;
 selectShow.addEventListener('change', async (event) => {
   size = parseInt(event.target.value)
@@ -165,11 +179,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   render(currentProducts, currentPagination);
 });
 
-
 /**
  * Feature 1 - Browse pages
  */
-
 
 let page = 1;
 selectPage.addEventListener('change', async (event) => {
@@ -179,11 +191,9 @@ selectPage.addEventListener('change', async (event) => {
   render(currentProducts, currentPagination);
 });
 
-
 /**
  * Feature 2 - Filter by brands
  */
-
 
  selectBrands.addEventListener('change', async (event) => {
   let brand = (event.target.value).toString()
@@ -192,7 +202,6 @@ selectPage.addEventListener('change', async (event) => {
   currentProducts = currentProducts.filter(currentProducts => currentProducts['brand'] == brand);
   render(currentProducts, currentPagination);
 });
-
 
 /**
  * Setting of the parameter Display by
@@ -203,16 +212,20 @@ selectPrice.addEventListener('change', async (event) => {
   const products = await fetchProducts(page, size);
   setCurrentProducts(products);
 
+  /**
+  * Feature 3 - Filter by recent products
+  */
 
-  // Feature 3 - Filter by recent products
   if(display_by == 'price-recently')
   {
     var today = new Date()
     currentProducts = currentProducts.filter(currentProducts => new Date(currentProducts['released']) - today.getDate() < 14);
   }
 
+  /**
+  * Feature 4 - Filter by reasonable price
+  */
 
-  // Feature 4 - Filter by reasonable price
   if(display_by == 'price-reasonnable')
   {
     currentProducts = currentProducts.filter(currentProducts => currentProducts['price'] <50);
@@ -240,7 +253,10 @@ selectSort.addEventListener('change', async (event) => {
   setCurrentProducts(products);
 
 
-  // Feature 5 - Sort by price
+  /**
+  * Feature 5 - Sort by price
+  */
+
   if(sort == 'price-asc')
   {
     currentProducts = currentProducts.sort(sort_by_price);
@@ -252,8 +268,10 @@ selectSort.addEventListener('change', async (event) => {
     currentProducts.reverse();
   }
 
-  
-  // Feature 6 - Sort by date
+  /**
+  * Feature 6 - Sort by date
+  */
+
   if(sort == 'date-asc')
   {
     currentProducts = currentProducts.sort(sort_by_date);
