@@ -225,7 +225,7 @@ function sort_by_price(product_1, product_2){
 };
 
 function sort_by_date(product_1, product_2){
-  return new Date(product_1['date']) - new Date(product_2['date'])
+  return new Date(product_1['released']) - new Date(product_2['released'])
 };
 
 selectSort.addEventListener('change', async (event) => {
