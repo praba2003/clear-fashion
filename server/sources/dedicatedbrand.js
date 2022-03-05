@@ -1,5 +1,5 @@
-const fetch = require('node-fetch');
-const cheerio = require('cheerio');
+const fetch = import('node-fetch');
+const cheerio = import('cheerio');
 
 /**
  * Parse webpage e-shop
