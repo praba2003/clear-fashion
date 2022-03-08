@@ -4,8 +4,8 @@ const fs = require('fs');
 
 const MONGODB_DB_NAME = 'clearfashion';
 const MONGODB_COLLECTION = 'products';
-const MONGODB_URI = process.env.MONGODB_URI;
-
+//const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI = 'mongodb+srv://user:Sivabala1@cluster0.h6tqf.mongodb.net?retryWrites=true&writeConcern=majority';
 let client = null;
 let database = null;
 

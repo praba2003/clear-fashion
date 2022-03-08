@@ -13,11 +13,19 @@ const parse = data => {
 
   return $('.product-container .right-block')
     .map((i, element) => {
+      const brand = 'adresseparis';
+      
       const name = $(element.children.at(1))
         .find('.product-name')
         .text()
         .trim()
         .replace(/\s/g, ' ');
+
+      const description = $(element)
+      .find('.product-desc')
+      .text()
+      .trim()
+      .replace(/\s/g, ' ');
 
       const price = parseInt(
         $(element)
@@ -25,7 +33,7 @@ const parse = data => {
           .text()
       );
 
-      return {name, price};
+      return {brand, name, description, price};
     })
     .get();
 };

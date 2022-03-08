@@ -10,13 +10,17 @@ const cheerio = require('cheerio');
 const parse = data => {
   const $ = cheerio.load(data);
 
-  return $('.category-products .item .product-info')
+  return $('.category-products .item')
   .map((i, element) => {
+      const brand = 'montlimart';
+
+      const link = `${$(element)
+        .find('a')
+        .attr('href')}`;
+
       const name = $(element)
-      .find('.product-name')
-      .text()
-      .trim()
-      .replace(/\s/g, ' ');
+      .find('.product-name a')
+      .attr('title');
 
       const price = parseInt(
         $(element)
@@ -24,7 +28,7 @@ const parse = data => {
           .text()
       );
 
-      return {name, price};
+      return {brand, link, name, price};
     })
     .get();
 };

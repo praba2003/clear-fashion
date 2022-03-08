@@ -12,18 +12,31 @@ const parse = data => {
 
     return $('.productList-container .productList')
     .map((i, element) => {
+      const brand = 'dedicated';
+
+      const link = `https://www.dedicatedbrand.com${$(element)
+        .find('.productList-link')
+        .attr('href')}`;
+
+      const material_info = $(element)
+        .find('.productList-image-materialInfo')
+        .text()
+        .trim()
+        .replace(/\s/g, ' ');
+
       const name = $(element)
         .find('.productList-title')
         .text()
         .trim()
         .replace(/\s/g, ' ');
+      
       const price = parseInt(
         $(element)
           .find('.productList-price')
           .text()
       );
 
-      return {name, price};
+      return {brand, link, material_info, name, price};
     })
     .get();
 };

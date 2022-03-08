@@ -13,7 +13,9 @@ async function sandbox () {
 
     console.log(`🕵️‍♀️  browsing ${pages.length} pages with for...of`);
 
-    // Way 1 with for of: we scrape page by page
+    /**
+     * Way 1 with for of: we scrape page by page
+     */
     for (let page of pages) {
       console.log(`🕵️‍♀️  scraping ${page}`);
 
@@ -23,7 +25,7 @@ async function sandbox () {
 
       products.push(results);
     }
-
+    
     pages = [
       'https://www.loom.fr/collections/hauts',
       'https://www.loom.fr/collections/bas'
@@ -57,12 +59,52 @@ async function sandbox () {
 
     console.log('\n');
 
+    /**
+     * TODO 1 - Find all products related to a given brands
+     */
     console.log('💽  Find Loom products only');
 
-    const loomOnly = await db.find({'brand': 'loom'});
+    const loom_only = await db.find({'brand': 'loom'});
 
-    console.log(`👕 ${loomOnly.length} total of products found for Loom`);
-    console.log(loomOnly);
+    console.log(`👕 ${loom_only.length} total of products found for Loom`);
+    //console.log(loom_only);
+
+    loom_only.forEach(product => {
+      console.log(product)
+    });
+
+
+    /**
+     * TODO 2 - Find all products less than a price
+     */
+    let price = 80;
+    console.log('💽  Find all products less than a price, here ' + price);
+    const loom_less_price = await db.find({'brand': 'loom', 'price': {"$lt": price}});
+
+    console.log(`👕 ${loom_less_price.length} total of products found for Loom`);
+    //console.log(loom_less_price);
+
+    loom_less_price.forEach(product => {
+      console.log(product)
+    });
+
+    /**
+     * TODO 3 - Find all products sorted by price
+     */
+    console.log('💽  Find all products sorted by price');
+    
+
+    /**
+     * TODO 4 - Find all products sorted by date
+     */
+
+    
+
+    /**
+     * TODO 5 - Find all products scraped less than 2 weeks
+     */
+
+
 
     db.close();
   } catch (e) {

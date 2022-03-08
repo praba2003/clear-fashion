@@ -1,161 +1,281 @@
 [
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/joggers-lund-dedicated-logo-charcoal",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "Joggers Lund Dedicated Logo Charcoal",
     "price": 69
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-anything-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Anything Off-White",
     "price": 39
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-forbidden-fruit-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Forbidden Fruit Off-White",
     "price": 39
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/jacket-hoddevik-ombre-blue-ombre-blue",
+    "material_info": "Recycled PET-bottles & Organic cotton",
     "name": "Jacket Hoddevik Ombre Blue",
     "price": 199
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/windbreaker-skara-mint-surf-spray",
+    "material_info": "Recycled PET-bottles",
     "name": "Windbreaker Skara Mint",
     "price": 99
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/windbreaker-skara-stripes-multi-color-multi-color",
+    "material_info": "Recycled PET-bottles",
     "name": "Windbreaker Skara Stripes Multi Color",
     "price": 99
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/hoodie-falun-base-black-black",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "Hoodie Falun Base Black",
     "price": 69
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/hoodie-falun-base-grey-melange-grey-melange",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "Hoodie Falun Base Grey Melange",
     "price": 69
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-marker-bike-grey-melange-grey-melange",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Marker Bike Grey Melange",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-bike-crowd-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Bike Crowd Off-White",
     "price": 39
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-stitch-bike-mint-surf-spray",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Stitch Bike Mint",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/sweatshirt-malmoe-marker-bike-grey-melange-grey-melange",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "Sweatshirt Malmoe Marker Bike Grey Melange",
     "price": 69
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/hoodie-falun-marker-bike-black-black",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "Hoodie Falun Marker Bike Black",
     "price": 79
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/cardigan-molkom-waves-off-white-whisper-white",
+    "material_info": "Organic cotton",
     "name": "Cardigan Molkom Waves Off-White",
     "price": 99
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/shirt-varberg-sea-turtles-off-white-whisper-white",
+    "material_info": "Organic cotton",
     "name": "Shirt Varberg Sea Turtles Off-White",
     "price": 89
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/shirt-sandefjord-sea-turtles-off-white-whisper-white",
+    "material_info": "Organic cotton",
     "name": "Shirt Sandefjord Sea Turtles Off-White",
     "price": 79
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-base-terracotta-red-aragon",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Base Terracotta Red",
     "price": 29
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-base-dusty-purple-valerian",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Base Dusty Purple",
     "price": 29
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-work-hard-pizza-white-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Work Hard Pizza White",
     "price": 39
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-what-i-saw-white-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm What I Saw White",
     "price": 39
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-we-love-sumo-white-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm We Love Sumo White",
     "price": 39
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-mandela-smile-white-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Mandela Smile White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-your-mama-charcoal-forged-iron",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Your Mama Charcoal",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-your-mama-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Your Mama Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-wish-vegan-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Wish Vegan Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-eat-beans-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Eat Beans Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-team-herbivore-charcoal-forged-iron",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Team Herbivore Charcoal",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-team-herbivore-white-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Team Herbivore White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-sea-turtles-forest-green-dark-forest",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Sea Turtles Forest Green",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-save-the-whales-honey-yellow-beeswax",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Save The Whales Honey Yellow",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-save-the-whales-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Save The Whales Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-plastic-free-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Plastic Free Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-plastic-free-charcoal-forged-iron",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Plastic Free Charcoal",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-cut-waves-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Cut Waves Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-crayon-globe-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Crayon Globe Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-all-natural-white-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm All Natural White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-pawsitivity-off-white-whisper-white",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Pawsitivity Off-White",
     "price": 34
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-base-honey-yellow-beeswax",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Base Honey Yellow",
     "price": 29
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/t-shirt-stockholm-base-steel-blue-stonewash",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "T-shirt Stockholm Base Steel Blue",
     "price": 29
   },
   {
+    "brand": "dedicated",
+    "link": "https://www.dedicatedbrand.com/en/men/news/boxer-briefs-kalix-ocean-3-pack-multi-color",
+    "material_info": "Organic and Fairtrade cotton",
     "name": "Boxer Briefs Kalix Ocean 3-Pack",
     "price": 59
   }
