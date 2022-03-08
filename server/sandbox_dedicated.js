@@ -1,4 +1,5 @@
 /* eslint-disable no-console, no-process-exit */
+const fs = require('fs');
 const dedicated_brand = require('./sources/dedicatedbrand');
 
 const url_dedicated = 'https://www.dedicatedbrand.com/en/men/news';
@@ -14,7 +15,10 @@ async function sandbox (eshop = url_dedicated) {
     })
 
     console.log('done');
-    process.exit(0);
+    
+    const data = JSON.stringify(products, null, 2);
+    fs.writeFileSync('products_for_dedicated_brand.json', data);
+    process.exit(0); 
   
   } catch (e) {
     console.error(e);

@@ -1,4 +1,5 @@
 /* eslint-disable no-console, no-process-exit */
+const fs = require('fs');
 const montlimart_brand = require('./sources/montlimartbrand');  
 
 const url_montlimart = "https://www.montlimart.com/fabrique-en-france.html?gclid=EAIaIQobChMI9OaIrNKv9gIVSQOLCh2C8gvkEAAYASAAEgLl1PD_BwE";
@@ -14,7 +15,10 @@ async function sandbox (eshop = url_montlimart) {
     })
 
     console.log('done');
-    process.exit(0);
+
+    const data = JSON.stringify(products, null, 2);
+    fs.writeFileSync('products_for_montlimart_brand.json', data);
+    process.exit(0); 
   
   } catch (e) {
     console.error(e);
