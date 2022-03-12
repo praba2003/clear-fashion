@@ -89,9 +89,9 @@ async function sandbox () {
      */
     let price = 80;
     console.log('💽  Find all products less than a price, here ' + price);
-    const loom_less_price = await db.find({'brand': 'loom', 'price': {"$lt": price}});
-    console.log(`👕 ${loom_less_price.length} total of products found`);
-    loom_less_price.forEach(product => {
+    const m1_products_less_price = await db.find({'price': {"$lt": price}});
+    console.log(`👕 ${m1_products_less_price.length} total of products found`);
+    m1_products_less_price.forEach(product => {
       console.log(product)
     });
     
