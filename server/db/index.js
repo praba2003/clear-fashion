@@ -84,7 +84,7 @@ module.exports.sort = async query => {
 
     return result;
   } catch (error) {
-    console.error('🚨 collection.find...', error);
+    console.error('🚨 collection.find().sort...', error);
     return null;
   }
 };
@@ -100,7 +100,7 @@ module.exports.sort = async query => {
 
     return result;
   } catch (error) {
-    console.error('🚨 collection.find...', error);
+    console.error('🚨 collection.aggregate...', error);
     return null;
   }
 };

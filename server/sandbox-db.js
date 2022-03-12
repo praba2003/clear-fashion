@@ -148,7 +148,12 @@ async function sandbox () {
      * TODO 5 - Find all products scraped less than 2 weeks
      */
 
-
+    var current_date = Date.now();
+    var before_date = current_date - 14;
+    // Method 1: 
+    console.log('💽  Method 1 - Find all products scraped less than 2 weeks');
+   
+    
     db.close();
   } catch (e) {
     console.error(e);
