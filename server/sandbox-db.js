@@ -148,9 +148,6 @@ async function sandbox () {
      * TODO 5 - Find all products scraped less than 2 weeks
      */
 
-    /**
-     * WAY 2 : 
-     */
 
     db.close();
   } catch (e) {
