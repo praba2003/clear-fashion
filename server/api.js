@@ -20,7 +20,6 @@ app.get('/', (request, response) => {
 /**
 * ENDPOINT 1 - GET /products
 */
-
 app.get('/products', (request, response) => 
 {
   db.getDB();
