@@ -3,73 +3,58 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>👕 Clear Fahion | Environmentally & human-friendly clothes</title>
+    <title>👕 Clear Fashion | Environmentally & human-friendly clothes</title>    
+    <link rel="stylesheet" href="visual.css">
   </head>
+
   <body>
-    <h1 style="font-family:cursive; text-align:center;">👕 Clear Fahion | Environmentally & human-friendly clothes</h1>
+    <header>
+      <div class="header-content">
+        <h1 id="first_title">Clear Fashion</h1>
+        <p>Clear Fashion is an iOS and Android application that allows you to choose environmentally & human-friendly clothes.
+          <br>With Clear Fashion, you will get an analysis with transparency and independency of the commitments of brands 
+          <br>according to 4 themes: Human, Health, Environment & Animals.</p>
+       </div>
+    </header>
+
+    <!-- == Options == --> 
     <section id="options">
-      <h2 style="font-family:cursive;">Parameters</h2>
-      <div style="font-family:cursive;" id="show">
-        <label for="show-select">Show:</label>
-        <select style="font-family:cursive;" name="show" id="show-select">
-          <option value="12">12</option>
-          <option value="24">24</option>
-          <option value="48">48</option>
+      <h2>Filters</h2>
+      <div id="filters">
+        <label for="price-select">Price less than:<br></label>
+        <select name="price" id="price-select">
+          <option style="font-family:Lucida Handwriting" value="25">25€</option>
+          <option style="font-family:Lucida Handwriting" value="50">50€</option>
+          <option style="font-family:Lucida Handwriting" value="75">75€</option>
+          <option style="font-family:Lucida Handwriting" value="100">100€</option>
+          <option style="font-family:Lucida Handwriting" value="125">125€</option>
+          <option style="font-family:Lucida Handwriting" value="150">150€</option>
+          <option style="font-family:Lucida Handwriting" value="175">175€</option>
+          <option style="font-family:Lucida Handwriting" value="200">200€</option>
         </select>
       </div>
-      <div style="font-family:cursive;" id="page">
-        <label for="page-select">Go to page:</label>
-        <select style="font-family:cursive;" name="page" id="page-select"> </select>
-      </div>
-      <div style="font-family:cursive;" id="filters">
-        <label for="price-select">Display by:</label>
-        <select style="font-family:cursive;" name="price" id="price-select">
-          <option value="price-reasonnable">By reasonable price</option>
-          <option value="price-recently">By recently released</option>
+
+      <div id="brand">
+        <label for="brand-select">By brands:<br></label>
+        <select name="brand" id="brand-select"> 
+          <option style="font-family:Lucida Handwriting" value="loom">Loom</option>
+          <option style="font-family:Lucida Handwriting" value="dedicated">Dedicated</option>
         </select>
       </div>
-      <div style="font-family:cursive;" id="brand">
-        <label for="brand-select">By brands:</label>
-        <select style="font-family:cursive;" name="brand" id="brand-select"> </select>
-      </div>
-      <div style="font-family:cursive;" id="sort">
-        <label for="sort-select">Sort:</label>
-        <select style="font-family:cursive;" name="sort" id="sort-select">
-          <option value="price-asc">Cheaper</option>
-          <option value="price-desc">Expensive</option>
-          <option value="date-asc">Recently released</option>
-          <option value="date-desc">Anciently released</option>
+
+      <div id="sort">
+        <label for="sort-select">Sort:<br></label>
+        <select name="sort" id="sort-select">
+          <option style="font-family:Lucida Handwriting" value="price-asc">Cheaper</option>
+          <option style="font-family:Lucida Handwriting" value="price-desc">Expensive</option>
         </select>
       </div>
     </section>
-    <section id="indicators">
-      <h2 style="font-family:cursive;">Indicators</h2>
-      <div style="font-family:cursive;">
-        <span>👖 Number of products: </span>
-        <span id="nbProducts">0</span>
-      </div>
-      <div style="font-family:cursive;">
-        <span>👚 Number of new products: </span>
-        <span id="nbRecentProducts">0</span>
-      </div>
-      <div style="font-family:cursive;">
-        <span>50th percentile price value: </span>
-        <span id="p50">0</span>
-      </div>
-      <div style="font-family:cursive;">
-        <span>90th percentile price value: </span>
-        <span id="p90">0</span>
-      </div>
-      <div style="font-family:cursive;">
-        <span>95th percentile price value: </span>
-        <span id="p95">0</span>
-      </div>
-      <div style="font-family:cursive;"> 
-        <span>Last released date: </span>
-        <span id="lastReleasedDate">2020-01-01</span>
-      </div>
+    
+    <!-- == Products == --> 
+    <section id="products">
     </section>
-    <section id="products"></section>
+
     <script type="text/javascript" charset="UTF-8" src="portfolio.js"></script>
   </body>
 </html>

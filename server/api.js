@@ -23,9 +23,10 @@ app.get('/', (request, response) => {
 app.get('/products', async(request, response) => 
 {
   db.getDB();
-  const elmt = await db.find()
-  response.send(elmt);
-  db.close();
+  const elmt = await db.find();
+  response.send({'success': true, 'data':{'result': elmt}});
+  //response.send(elmt);
+  //db.close();
 });
 // To test : http://localhost:8092/products
 
@@ -50,10 +51,11 @@ app.get('/products/search', async(request, response) =>
       {'$limit': parseInt(limit)}
     ]
   )
-  response.send({'limit': limit, 'found':elmt.length, 'results':elmt });
-  db.close();
+
+  response.send({'limit': limit, 'found':elmt.length, 'data':{'result':elmt }});
 });
 // To test : http://localhost:8092/products/search?limit=5&brand=loom&price=50
+
 
 /**
 * ENDPOINT 3 - GET /products/:id

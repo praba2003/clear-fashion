@@ -1,0 +1,108 @@
+header
+{
+    width: 100vw;
+    height: 50vh;
+    background-image: url("picture_homepage.png");
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-content 
+{
+    color: #ffffff;
+    text-align: center;
+    font-family:'Lucida Handwriting';
+}
+
+.header-content h1
+{
+    font-size: 8vmin;
+    margin-top: 0.1px;
+}
+
+.header-content p
+{
+    font-weight: bold;
+    margin-top: 120px;
+    font-size: 2vmin;
+}
+
+/* Options */
+#options 
+{
+    width: 90%;
+    top: 400px;
+    margin: 50px auto;
+    font-family:'Lucida Handwriting';
+}
+
+/* Products */
+#products
+{
+    text-align: center;
+    position: absolute;
+    top: 370px;
+    left: 400px;
+    font-family:'Lucida Handwriting';
+}
+
+/* Product in Products */
+.product 
+{
+  display: inline-block;
+  text-align: center;
+  width: 150;
+  height: 150;
+}
+
+.product-img img 
+{
+    width: 200px;
+    height: 200px;
+}
+
+.product-body h2 
+{
+    color:#badcd7;
+    font-size: 1.5vmin;
+}
+
+.product-body p 
+{
+    color:#badcd7;
+    font-size: 1.5vmin;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.product-footer p 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-footer button
+{
+    width: 150px;
+    background-color:#badcd7;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid #badcd7;
+    padding: 6px;
+    font-size: 10px;
+    font-family:'Lucida Handwriting';
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: 0.2s;
+}
+
+.product-footer button:hover
+{
+    background-color: white;
+    color: #badcd7;
+    border: 2px solid #badcd7;
+}
